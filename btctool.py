@@ -32,11 +32,13 @@ def memreadblock(ser, addr, size):
 	buf=''
 	m = False
 	while not m:
-		m = lineregex.match(ser.readline().strip())
+		s = ser.readline().strip()
+		m = lineregex.match(re.sub('\s+', ' ', s)) #trim repeated spaces to 1 and then apply lineregex
 	while m:
-		bytes = [chr(int(x, 16)) for x in m.group(1)[1:].split(' ')]
+		bytes = [chr(int(x[0:2],16))+chr(int(x[2:4],16))+chr(int(x[4:6],16))+chr(int(x[6:8],16)) for x in m.group(1)[1:].split(' ')]
 		buf+=''.join(bytes)
-		m = lineregex.match(ser.readline().strip())
+		s = ser.readline().strip()
+		m = lineregex.match(re.sub('\s+', ' ', s))
 	return buf
 
 def memreadblock2file(ser, fd, addr, size):
