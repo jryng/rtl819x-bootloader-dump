@@ -76,7 +76,7 @@ def main():
 	(options, args) = optparser.parse_args()
 	if len(args) != 0:
 		optparser.error("incorrect number of arguments")
-	ser = serial.Serial(options.serial, 115200, timeout=1)
+	ser = serial.Serial(options.serial, 38400, timeout=1)
 	if options.read:
 		memread(ser, options.read, int(options.addr, 0), int(options.size, 0), int(options.block, 0))
 	return
