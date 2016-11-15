@@ -6,7 +6,7 @@ It deals through the serial port with the bootloader sending the command **D** p
 bootloader and captures the output dumping it into a binary file.
 
 **Example:**  
-`python2 cfetool.py --read=test.bin --addr=0xbfc00000 --size=0x200000 --block=0x10000`  
+`python2 btctool.py --read=test.bin --addr=0xbfc00000 --size=0x200000 --block=0x10000`  
   
    --addr: Memory Address  
    --size: Memory Size  
