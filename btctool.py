@@ -21,8 +21,8 @@ def skip_prompt(ser):
 def wait_prompt(ser):
 	printf("Waiting for a prompt...")
 	while True:
-		ser.write("\x03")
-		if(ser.read(1) == 'C' and ser.read(1) == 'F' and ser.read(1) == 'E' and ser.read(1) == '>'):
+		ser.write('\r'.encode())
+		if(ser.read(1)=='<' and ser.read(1)=='R' and ser.read(1)=='e' and ser.read(1)=='a' and ser.read(1)=='l' and ser.read(1)=='T' and ser.read(1)=='e' and ser.read(1)=='k' and ser.read(1)=='>'):
 			skip_prompt(ser)
 			printf(" OK\n")
 			return
