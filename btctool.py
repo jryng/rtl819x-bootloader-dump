@@ -57,7 +57,7 @@ def memread(ser, path, addr, size, block):
 	fd = open(path, "wb")
 	while size > 0:
 		cur_size = (total_size - size)
-		printf('%d%% (%d/%d)' %((cur_size / total_size) * 100, cur_size, total_size))
+		printf('%d%% (%d/%d)	Address: %s' %((cur_size / total_size) * 100, cur_size, total_size,hex(addr)))
 		if size > block:
 			memreadblock2file(ser, fd, addr, block)
 			size -= block
@@ -65,6 +65,7 @@ def memread(ser, path, addr, size, block):
 		else:
 			memreadblock2file(ser, fd, addr, size)
 			size = 0
+			printf("100%\n")
 	fd.close()
 	return
 
