@@ -1,5 +1,22 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+#This tool expects data from the serial terminal in a format like this
+#<RealTek>D 0x80300000 40
+#80300000:       60C34A37        72783B1B        FA3DBF73        B5A5BE6F
+#80300010:       4E01C8DF        AEF3DCFD        A796CC4F        6FB33EA6
+#80300020:       4DE6CCBB        B43B07EF        EFD5FCB0        3732D4F7
+#80300030:       7EDBB4F8        AD7DE946        2643A9B9        3DF31547
+#80300040:       4B3BFC3B        CDEF9A97        938CFA51        FC448F43
+#80300050:       E657FEF9        FA73DFCC        46FDD345        D5AB7959
+#80300060:       6FAE73D4        9C8BDCC9        B2AB1E71        AF94EED5
+#80300070:       552B5FBF        C6DFB259        6F6ECED1        8E7AB710
+#80300080:       22FAEF57        6A5B303F        3FD57C76        5B614BDE
+#80300090:       2FF4976B        6EB9E52F        D7BF8DBD        AB88B676
+
+#Example command, backup 2MB of flash:
+#  python2 cfetool.py --read=test.bin --addr=0xbfc00000 --size=0x200000 --block=0x10000
+
 from __future__ import division
 from optparse import OptionParser
 
