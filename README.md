@@ -37,7 +37,7 @@ zyx1tool.py, zyx2tool.py
 For **Ralink RT63365** (Trendchip) based SoCs running the tcboot bootloader. Tested on Huawei HG532s  
   
 **Example:**  
-`python2 tctool.py --read=test.bin --addr=0xB0000000 --size=0x800000 --block=0x10000`  
+`python2 rt63365tool --read=test.bin --addr=0xB0000000 --size=0x800000 --block=0x10000`  
   
 --addr: Memory Address  
 --size: Memory Size  
