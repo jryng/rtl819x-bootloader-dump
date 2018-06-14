@@ -16,10 +16,10 @@
 # bldr> 
 
 #Example command, backup 8MB of flash:
-#  python2 rt63365tool --read=test.bin --addr=0xB0000000 --size=0x800000 --block=0x10000
+#  python2 rt63365tool.py --read=test.bin --addr=0xB0000000 --size=0x800000 --block=0x10000
 
 #Example command, dump 32MB of RAM content:
-#  python2 rt63365tool --read=test.bin --addr=0x80000000 --size=0x2000000 --block=0x10000
+#  python2 rt63365tool.py --read=test.bin --addr=0x80000000 --size=0x2000000 --block=0x10000
 
 from __future__ import division
 from optparse import OptionParser
