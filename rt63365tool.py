@@ -27,6 +27,7 @@ from optparse import OptionParser
 import serial
 import sys
 import re
+import time
 
 lineregex = re.compile(r'(?:[0-9a-f]{8} )((?:[ |\\.][0-9a-f]{2}){1,16})')
 
@@ -40,10 +41,11 @@ def skip_prompt(ser):
 
 def wait_prompt(ser):
 	printf("Waiting for a prompt...")
-
 	ser.flush()
 	while True:
+		ser.write("\x74") #send t (required on Tplink routers)
 		ser.write("\x0D") #send carriage return
+		ser.write("\x0D") #send 2nd carriage return for getting a clean CLI
 		if(ser.read(1) == 'b' and ser.read(1) == 'l' and ser.read(1) == 'd' and ser.read(1) == 'r' and ser.read(1) == '>'):
 			skip_prompt(ser)
 			printf(" OK\n")
