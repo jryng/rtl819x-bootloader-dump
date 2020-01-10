@@ -33,6 +33,16 @@ It's compatible with all CFE bootloaders with "dm" command usually found in **BC
 **Zyxel variants:**  
 zyx1tool.py, zyx2tool.py
 
+## cfenand
+This tool can dump the NAND flash of a device with CFE bootloader into a file.  
+It's compatible with all CFE bootloaders with "dn" command usually found in **BCM63xx SoCs**.  
+Homepage: https://github.com/Depau/bcm-cfedump
+  
+**Example:**  
+`python -m cfenand -D /dev/ttyUSB0 -O nand.bin -t 0.05 nand`  
+  
+Tested with a BCM63167 Sercomm router (128MB flash).
+
 ## rt63365tool
 For **Ralink RT63365** (Trendchip) based SoCs running the tcboot bootloader. Tested on Huawei HG532s  
   
