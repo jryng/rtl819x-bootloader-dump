@@ -67,6 +67,18 @@ This tool can dump the flash memory of a **Realtek RTL8186** based device runnin
 **Note:** the default baud rate used by the tool is 38400 bps  
 
    
+## rtl867xtool
+
+This tool was tested on a **Realtek RTL8676** based device (ZTE H298N)  
+
+**Example:**  
+`python2 rtl867xtool.py --read=test.bin --addr=0x80000000 --size=0x8000000 --block=0x10000`  
+  
+   --addr: Memory Address  
+   --size: Memory Size  
+   --block: Buffer size (Default: 10240 -> 10Kb)  
+
+
 ---
 
-All tools are based on the original brntool (@rvalles): Homepage: https://github.com/rvalles/brntool
+All tools are based/inspired on the original brntool (@rvalles): Homepage: https://github.com/rvalles/brntool
