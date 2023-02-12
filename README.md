@@ -1,10 +1,10 @@
 # bootloader-dump tools
 Collection of tools for dumping the memory or backing up the flash chip using the **memory read** native  
-command present in bootloaders of some devices (not all) like routers.
+command present in bootloaders from some devices (not all) like routers.
 
 Usually you access to the bootloader command line using an UART adapter, and then if the command is  
-available dump small portions of the memory in plain text, this tools automate the process for getting  
-a full backup in binary format. It deals through the serial port with the bootloader sending the command  
+available dump small portions of the memory in plain text, these tools automate the process for getting  
+a full backup in binary format. It deals through the serial port with the bootloader by sending the command  
 **memory read** and captures the output dumping it into a binary file.
 
 
