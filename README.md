@@ -43,6 +43,18 @@ Homepage: https://github.com/Depau/bcm-cfedump
   
 Tested with a BCM63167 Sercomm router (128MB flash).
 
+## cfenandzyx
+For broadcom NAND devices with a CFE bootloader modded by Zyxel with the **ATDF** command available. Tested on Mitrastar GPT-2541GNAC  
+
+**Example:**  
+  * enable the ATDF command: open the console with minicom and execute:   
+`ATEN 1 10F0A563`
+  * dump the flash: close minicom and execute on the computer:  
+`python cfenandzyx.py --verbose --blkn 0 --size 0x8000000 --read mitrastardump.bin`  
+
+   --size: Memory Size  
+   --blkn: flash block position (first is 0)  
+
 ## rt63365tool
 For **Ralink RT63365** (Trendchip) based SoCs running the tcboot bootloader. Tested on Huawei HG532s  
   
