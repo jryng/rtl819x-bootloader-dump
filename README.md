@@ -53,6 +53,15 @@ For **Ralink RT63365** (Trendchip) based SoCs running the tcboot bootloader. Tes
 --size: Memory Size  
 --block: Buffer size  
 
+## en751221tool
+For **Econet EN751221** based SoCs running the tcboot bootloader. Tested on ZTE H367A
+
+**Example:**  
+  * open minicom in the bootloader CLI execute:  
+`readflash 80020000 0 1a00000`  
+  * close minicom, at the pc execute:  
+`python2 rt63365tool.py --read=dump1.bin --addr=0x80020000 --size=0x1a00000 --block=0x10000`  
+
 ## rtl8186tool
 
 This tool can dump the flash memory of a **Realtek RTL8186** based device running the btcode bootloader  
