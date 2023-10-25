@@ -11,7 +11,7 @@ a full backup in binary format. It deals through the serial port with the bootlo
 - All scripts require Python 2 to be installed.
 - "pyserial" package needs to be installed via pip.
 - If using Windows, change the source serial from "/dev/ttyUSB0" to "COM3" or whtever COM number is attached to your UART adapter in Device Manager.
-- If using Windows, replace "python2" command with "py -2".
+- If using multiple Python versions, replace "python2" command with "py -2".
 
 
 ## brntool
