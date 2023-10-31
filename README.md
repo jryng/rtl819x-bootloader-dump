@@ -7,6 +7,12 @@ available dump small portions of the memory in plain text, these tools automate 
 a full backup in binary format. It deals through the serial port with the bootloader by sending the command  
 **memory read** and captures the output dumping it into a binary file.
 
+# Prerequisites
+- All scripts require Python 2 to be installed.
+- "pyserial" package needs to be installed via pip.
+- If using Windows, change the source serial from "/dev/ttyUSB0" to "COM3" or whtever COM number is attached to your UART adapter in Device Manager.
+- If using multiple Python versions, replace "python2" command with "py -2".
+
 
 ## brntool
 This tool can, so far, given a serial port connected to a device with **brnboot / amazonboot**, dump its flash into a file.  
