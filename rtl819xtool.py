@@ -45,7 +45,7 @@ def wait_prompt(ser):
 
 def memreadblock(ser, addr, size):
 	skip_prompt(ser)
-	ser.write("D %x %d\r" %(addr, size/4))
+	ser.write("DW %x %d\r" %(addr, size/4))
 	buf=''
 	m = False
 	while not m:
